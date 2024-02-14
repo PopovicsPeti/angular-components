@@ -1,0 +1,6 @@
+<div class="app-button">
+  <span *ngIf="iconName">
+      <i [class]='iconName'></i>
+  </span>
+  <ng-content select=".button-text"></ng-content>
+</div>

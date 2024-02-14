@@ -1,0 +1,32 @@
+<div class="course-card" >
+    <div class="course-card__description">
+      <!-- Replace ::text:: with your code -->
+      <div class="course-card__description-title">{{ title }}</div>
+      <div class="course-card__description-text">{{ description }}</div>
+    </div>
+    <div class="course-card__info">
+        <div class="course-card__info-text">
+            <div>
+              <b>Authors: </b>
+              <p>
+                <span class="authors-span" *ngFor="let author of authors">{{ author }}</span>
+              </p>
+            </div>
+            <div><b>Duration: </b><span class="course-card__duration">{{ duration }} minutes</span></div>
+            <div><b>Created: </b><span class="course-card__date">{{ creationDate |  date:'dd.MM.YYYY' }}</span></div>
+        </div>
+        <div class="course-card__info-actions">
+            <app-button (click)="clickOnShow(courseData)">
+              <ng-container class="button-text">Show Course </ng-container>
+            </app-button>
+            <div class="course-card__buttons" *ngIf="editable">
+               <button class="btn" (click)='onDeleteCourse(id)'>
+                <i class="fa-solid fa-trash"></i>
+               </button>
+               <button class="btn" (click)='onEditCourse(id)'>
+                <i class="fa-solid fa-edit"></i>
+               </button>
+            </div>
+        </div>
+    </div>
+</div>

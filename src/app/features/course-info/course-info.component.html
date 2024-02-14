@@ -1,0 +1,26 @@
+
+
+<section id="course-info-container" class="course-info-container">
+  <div class="course-info-container-box">
+    <div>
+      <div class="title">{{ courseData.title}}</div>
+      <div class="course-info">
+        <div class="course-info__description">
+          <h2>Description:</h2>
+          {{ courseData.description }}
+        </div>
+        <div class="course-info__info">
+          <div><b>ID: </b><span class="course-info__info-id">{{ courseData.id }}</span></div>
+          <div><b>Duration: </b><span class="course-info__info-duration">{{ courseData.duration }}</span></div>
+          <div><b>Created: </b><span class="course-info__info-date">{{ courseData.creationDate }}</span></div>
+          <div><b>Authors: </b><span class="course-info__info-authors">{{ courseData.authors }}</span></div>
+        </div>
+      </div>
+      <div class="navigation-block">
+        <app-button (click)="onClose()">
+          <ng-container class="button-text" >Back</ng-container>
+        </app-button>
+      </div>
+    </div>
+  </div>
+</section>

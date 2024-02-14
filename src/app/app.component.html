@@ -1,0 +1,35 @@
+<app-header>
+    <h1 class="user-name">Harry Potter</h1>
+    <app-button class="btn">
+      <ng-container class="button-text">Log Out</ng-container>
+    </app-button>
+</app-header>
+<div class="app-root">
+  <!-- Search component -->
+  <!--<app-search></app-search>-->
+
+  <!-- Info component -->
+  <app-info [title]="'Your list is empty'" [text]="'Please use &quot;Add New Course&quot; button to add your first course'">
+    <div class="btn">
+      <app-button >
+        <ng-container class="button-text">Add New Course</ng-container>
+      </app-button>
+    </div>
+  </app-info>
+
+  <!-- Course Card component -->
+  <app-course-list></app-course-list>
+
+
+  <!-- Login Form component -->
+  <!--<app-login-form></app-login-form>-->
+
+  <!-- Login Form component -->
+  <!--<app-registration-form></app-registration-form>-->
+
+  <!-- Login Form component -->
+  <!--<app-course-form></app-course-form>-->
+
+  <!-- Modal component -->
+  <!-- <app-modal [message]="'Message'" [title]="'Title'" [okButtonText]="'Ok'" [cancelButtonText]="'Cancel'"></app-modal> -->
+</div>
